@@ -13,7 +13,7 @@ namespace UnigisTest
     {
         public UnigisContext() : base("UnigisDB")
         {
-            Database.SetInitializer<UnigisContext>(new CreateDatabaseIfNotExists<UnigisContext>());
+            Database.SetInitializer<UnigisContext>(new DropCreateDatabaseAlways<UnigisContext>());
         }
 
         public DbSet<Raza> Razas { get; set; }
